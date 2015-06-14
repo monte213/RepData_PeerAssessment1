@@ -1,6 +1,6 @@
----
-title: "Coursera - Reproducible Research - Peer Assignment 1"
----
+
+Coursera - Reproducible Research - Peer Assignment 1
+============================================================================
 ## Loading and preprocessing the data
 
 Load the data (i.e. read.csv())

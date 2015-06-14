@@ -1,7 +1,6 @@
----
-title: "Coursera - Reproducible Research - Peer Assignment 1"
-output: html_document
----
+
+Coursera - Reproducible Research - Peer Assignment 1
+============================================================================
 ## Loading and preprocessing the data
 
 Load the data (i.e. read.csv())
@@ -20,7 +19,7 @@ agg <- aggregate(steps ~ date, data = data, FUN = "sum", na.rm = TRUE)
 
 Make a histogram of the total number of steps taken each day
 
-```{r}
+```{r hist}
 hist(agg$steps)
 ```
 
@@ -35,7 +34,7 @@ median(agg$steps, na.rm = TRUE)
 
 Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
-```{r}
+```{r plot}
 aggInterval <- aggregate(steps ~ interval, data = data, FUN = "mean", na.rm = TRUE)
 plot(aggInterval, type = "l")
 ```
@@ -69,7 +68,7 @@ data2[NAdata, "steps" ] <- dataDate[data2[NAdata, "date"], "steps"]
 
 Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
-```{r}
+```{r hist2}
 #no use for na.rm = TRUE anymore
 agg2 <- aggregate(steps ~ date, data = data2, FUN = "sum")
 hist(agg2$steps)
